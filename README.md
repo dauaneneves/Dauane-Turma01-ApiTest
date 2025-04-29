@@ -51,11 +51,11 @@ npm run ci
 
 Este projeto realiza testes automatizados de integração para a API [FakeRestAPI](https://fakerestapi.azurewebsites.net/index.html), com foco nos endpoints relacionados a **Users**:
 
-- `GET /api/v1/Users` – Lista todos os usuários
-- `POST /api/v1/Users` – Cria um novo usuário
-- `GET /api/v1/Users/{id}` – Busca um usuário pelo ID
-- `PUT /api/v1/Users/{id}` – Atualiza um usuário pelo ID
-- `DELETE /api/v1/Users/{id}` – Remove um usuário pelo ID
+- `GET /api/v1/Users` 
+- `POST /api/v1/Users`
+- `GET /api/v1/Users/{id}`
+- `PUT /api/v1/Users/{id}` 
+- `DELETE /api/v1/Users/{id}`
 
 A documentação completa da API está disponível [aqui](https://fakerestapi.azurewebsites.net/index.html).
 
@@ -69,7 +69,7 @@ A documentação completa da API está disponível [aqui](https://fakerestapi.az
 
 ## Análise de Qualidade
 
-A análise de qualidade do código é realizada com SonarCloud. Acompanhe os status no badge acima ou acesse o [relatório detalhado](https://sonarcloud.io/summary/new_code?id=dauaneneves_Dauane-Turma01-ApiTest).
+A análise de qualidade do código é realizada com SonarCloud. Acompanhe os status no badge acima ou acesse o [relatório detalhado](https://sonarcloud.io/project/overview?id=dauaneneves_Dauane-Turma01-ApiTest).
 
 ## Referências
 
