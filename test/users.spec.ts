@@ -71,11 +71,14 @@ describe('FakeREST Api', () => {
     });
 
     it('GET all users 2', async () => {
-      await p
+      const res = await p
         .spec()
         .get(`${baseUrl}/Users`)
         .expectStatus(StatusCodes.OK)
-        .expectJsonLength('*', val => Array.isArray(val) && val.length >= 0);
+        .returns('body');
+
+      expect(Array.isArray(res)).toBe(true);
+      expect(res.length).toBeGreaterThanOrEqual(0);
 
       requestCount++;
     });
