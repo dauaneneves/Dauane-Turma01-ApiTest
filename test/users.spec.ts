@@ -55,11 +55,17 @@ describe('FakeREST Api', () => {
     });
 
     it('GET all users 1', async () => {
-      await p
+      const res = await p
         .spec()
         .get(`${baseUrl}/Users`)
         .expectStatus(StatusCodes.OK)
-        .expectJsonMatch('*[0].id', /[0-9]+/);
+        .returns('body');
+
+      expect(Array.isArray(res)).toBe(true);
+
+      res.forEach(user => {
+        expect(user).toHaveProperty('id');
+      });
 
       requestCount++;
     });
@@ -79,7 +85,7 @@ describe('FakeREST Api', () => {
         .spec()
         .get(`${baseUrl}/Users/1`)
         .expectStatus(StatusCodes.OK)
-        .expectJsonLike({ id: userId });
+        .expectJsonLike({ id: 1 });
 
       requestCount++;
     });
